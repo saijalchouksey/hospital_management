@@ -1,0 +1,34 @@
+<%= form_with scope: :hospital, url: hospitals_path, local: true do |form| %>
+  <p>
+    <%= form.label :Hospital_No %><br>
+    <%= form.text_field :H_id %>
+  </p>
+ 
+  <p>
+    <%= form.label :Hospital_name %><br>
+    <%= form.text_field :H_name
+    %>
+  </p>
+
+  <p>
+    <%= form.label :Hospital_city %><br>
+    <%= form.text_field :H_city %>
+  </p>
+ 
+ <p>
+    <%= form.label :Hospital_address %><br>
+    <%= form.text_area :H_address %>
+  </p>
+ 
+ <p>
+    <%= form.label :Hospital_type %><br>
+    <%= form.text_field :H_type %>
+  </p>
+ 
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+

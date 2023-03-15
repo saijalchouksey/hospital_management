@@ -1,0 +1,33 @@
+<%= form_with scope: :patient, url: patients_path, local: true do |form| %>
+  <p>
+    <%= form.label :p_name %><br>
+    <%= form.text_field :p_name %>
+  </p>
+ 
+  <p>
+    <%= form.label :p_age %><br>
+    <%= form.text_field :p_age %>
+  </p>
+
+  <p>
+    <%= form.label :p_gender %><br>
+    <%= form.text_field :p_gender %>
+  </p>
+ 
+ <p>
+    <%= form.label :p_address %><br>
+    <%= form.text_area :p_address %>
+  </p>
+ 
+ <p>
+    <%= form.label :p_disease %><br>
+    <%= form.text_field :p_disease %>
+  </p>
+ 
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+

@@ -1,0 +1,27 @@
+<p>
+  <strong>p_name:</strong>
+  <%= @patient.p_name %>
+</p>
+ 
+<p>
+  <strong>p_age:</strong>
+  <%= @patient.p_age %>
+</p>
+ 
+<p>
+  <strong>p_gender:</strong>
+  <%= @patient.p_gender %>
+</p>
+ 
+<p>
+  <strong>p_address:</strong>
+  <%= @patient.p_address %>
+</p>
+ 
+<p>
+  <strong>p_disease:</strong>
+  <%= @patient.p_disease %>
+</p>
+ 
+<%= link_to 'Edit', edit_patient_path(@patient) %>
+<%= link_to 'Back', patients_path %>

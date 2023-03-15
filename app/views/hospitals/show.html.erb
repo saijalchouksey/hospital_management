@@ -1,0 +1,27 @@
+<p>
+  <strong>H_id:</strong>
+  <%= @hospital.H_id %>
+</p>
+ 
+<p>
+  <strong>H_name:</strong>
+  <%= @hospital.H_name %>
+</p>
+ 
+<p>
+  <strong>H_city:</strong>
+  <%= @hospital.H_city %>
+</p>
+ 
+<p>
+  <strong>H_address:</strong>
+  <%= @hospital.H_address %>
+</p>
+ 
+<p>
+  <strong>H_type:</strong>
+  <%= @hospital.H_type %>
+</p>
+ 
+<%= link_to 'Edit', edit_hospital_path(@hospital) %>
+<%= link_to 'Back', hospitals_path %>

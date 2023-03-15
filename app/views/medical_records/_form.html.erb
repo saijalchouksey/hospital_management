@@ -1,0 +1,33 @@
+<%= form_with scope: :medicalrecord, url: medical_records_path, local: true do |form| %>
+  <p>
+    <%= form.label :date_of_admit %><br>
+    <%= form.text_field :date_of_admit %>
+  </p>
+ 
+  <p>
+    <%= form.label :date_of_discharge %><br>
+    <%= form.text_field :date_of_discharge %>
+  </p>
+
+  <p>
+    <%= form.label :doctor_fees %><br>
+    <%= form.text_field :doctor_fees %>
+  </p>
+ 
+ <p>
+    <%= form.label :room_charge %><br>
+    <%= form.text_area :room_charge %>
+  </p>
+ 
+ <p>
+    <%= form.label :total_bill %><br>
+    <%= form.text_field :total_bill %>
+  </p>
+ 
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
