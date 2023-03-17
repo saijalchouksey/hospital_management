@@ -1,0 +1,13 @@
+<p>
+  <strong>appointment_number:</strong>
+  <%= @appointment.appointment_number %>
+</p>
+ 
+<p>
+  <strong>appointment_date:</strong>
+  <%= @appointment.appointment_date %>
+</p>
+
+ 
+<%= link_to 'Edit', edit_appointment_path(@appointment) %>
+<%= link_to 'Back', appointments_path %>

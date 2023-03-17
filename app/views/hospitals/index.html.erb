@@ -1,14 +1,14 @@
-<h3>Listing hospital</h3>
-<%# <%= link_to 'New hospital', new_hospital_path %> 
+<h2>Listing hospital</h2>
+<%= link_to 'New hospital', new_hospital_path %> 
  
 <table class="table">
  
   <tr>
-    <th>H_id</th>
-    <th>H_name </th>
-    <th>H_city</th>
-    <th>H_address</th>
-    <th>H_type</th>
+    <th>Hospital number </th>
+    <th>Hospital name </th>
+    <th>Hospital city</th>
+    <th>Hospital address</th>
+    <th>Hospital type</th>
    
   </tr>
  
@@ -16,21 +16,18 @@
   <% @hospitals.each do |hospital| %>
 
     <tr>
-      <td><%= hospital.H_id %></td>
-      <td><%= hospital.H_name %></td>
-      <td><%= hospital.H_city %></td>
-      <td><%= hospital.H_address %></td>
-      <td><%= hospital.H_type %></td>
+      <td><%= hospital.hospital_number %></td>
+      <td><%= hospital.hospital_name%></td>
+      <td><%= hospital.hospital_city %></td>
+      <td><%= hospital.hospital_address %></td>
+      <td><%= hospital.hospital_type %></td>
       <td><%= link_to 'Show', hospital_path(hospital) %></td>
       <td><%= link_to 'Edit', edit_hospital_path(hospital) %></td>
-      <td><%= link_to 'Destroy', hospital_path(hospital),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Destroy', hospital_path(hospital), data: { 
+              turbo_method: :delete,
+              turbo_confirm: 'Are you sure?' } %></td>
     </tr>
   
   <% end %>
 
 </table>
-
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-   

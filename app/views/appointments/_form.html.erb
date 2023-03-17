@@ -1,0 +1,19 @@
+<%= form_with model: @appointment, local: true do |form| %>
+
+  <p>
+    <%= form.label :appointment_number %><br>
+    <%= form.number_field :appointment_number %>
+  </p>
+ 
+  <p>
+    <%= form.label :appointment_date %><br>
+    <%= form.date_field :appointment_date %>
+  </p>
+ 
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+

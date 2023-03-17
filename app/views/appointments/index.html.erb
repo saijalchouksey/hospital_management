@@ -1,0 +1,27 @@
+
+<h1>Listing appointments</h1>
+<%= link_to 'New appointment', new_appointment_path %>
+ 
+<table class="table">
+ <thead>
+  <tr>
+    <th>Number</th>
+    <th>Date</th>
+  </tr>
+ </thead>
+ <tbody>
+  <% @appointments.each do |appointment| %>
+
+    <tr>
+      <td><%= appointment.appointment_number %></td>
+      <td><%= appointment.appointment_date %></td>
+      <td><%= link_to 'Show', appointment_path(appointment) %></td>
+      <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+      <td><%= link_to 'Destroy', appointment_path(appointment),data: {
+              turbo_method: :delete,
+              turbo_confirm: 'Are you sure?' } %></td>
+    </tr>
+  
+  <% end %>
+</tbody>
+</table>
