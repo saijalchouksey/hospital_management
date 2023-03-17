@@ -2,30 +2,30 @@
 <h1>Listing patients</h1>
 <%= link_to 'New patient', new_patient_path %>
  
-<table>
+<table class="table">
  <thead>
   <tr>
-    <th>p_name</th>
-    <th>p_age </th>
-    <th>p_gender</th>
-    <th>p_address</th>
-    <th>p_disease</th>
+    <th>Name</th>
+    <th>Age </th>
+    <th>Gender</th>
+    <th>Address</th>
+    <th>Disease</th>
   </tr>
  </thead>
  <tbody>
   <% @patients.each do |patient| %>
 
     <tr>
-      <td><%= patient.p_name %></td>
-      <td><%= patient.p_age %></td>
-      <td><%= patient.p_gender %></td>
-      <td><%= patient.p_address %></td>
-      <td><%= patient.p_disease %></td>
+      <td><%= patient.patient_name %></td>
+      <td><%= patient.patient_age %></td>
+      <td><%= patient.patient_gender %></td>
+      <td><%= patient.patient_address %></td>
+      <td><%= patient.patient_disease %></td>
       <td><%= link_to 'Show', patient_path(patient) %></td>
       <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-      <td><%= link_to 'Destroy', patient_path(patient),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Destroy', patient_path(patient), data: { 
+              turbo_method: :delete,
+              turbo_confirm: 'Are you sure?' } %></td>
     </tr>
   
   <% end %>

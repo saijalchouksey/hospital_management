@@ -35,7 +35,7 @@ class PatientsController < ApplicationController
     end
   end
 
-  def destory
+  def destroy
     @patient = Patient.find(params[:id])
     @patient.destroy
  
@@ -44,6 +44,6 @@ class PatientsController < ApplicationController
 
   private
   def patient_params
-    params.require(:patient).permit(:p_name, :p_disease, :p_address, :p_age, :p_gender)
+    params.require(:patient).permit(:patient_name, :patient_disease, :patient_address, :patient_age, :patient_gender)
   end
 end
