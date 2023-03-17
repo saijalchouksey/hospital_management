@@ -1,45 +1,46 @@
 class MedicalRecordsController < ApplicationController
   def index
-    @medicalrecords = MedicalRecord.all
+    @medical_records = Medicalrecord.all
   end
 
   def new
-    @medicalrecord = MedicalRecord.new
+    @medical_record = Medicalrecord.new
   end
 
   def create
-    @medicalrecord = MedicalRecord.new(medicalrecord_params)
+    @medical_record = Medicalrecord.new(medicalrecord_params)
  
-    if @medicalrecord.save
-    redirect_to @medicalrecord
+    if @medical_record.save
+      # binding.pry
+      redirect_to medical_record_path(@medical_record)
     else
       render 'new'
     end
   end
 
   def show
-    @medicalrecord = MedicalRecord.find(params[:id])
+    @medical_record = Medicalrecord.find(params[:id])
   end
 
   def edit
-    @medicalrecord = MedicalRecord.find(params[:id])
+    @medical_record = Medicalrecord.find(params[:id])
   end
 
   def update
-    @medicalrecord = MedicalRecord.find(params[:id])
+    @medical_record = Medicalrecord.find(params[:id])
  
-    if @medicalrecord.update(medicalrecord_params)
-    redirect_to @medicalrecord
+    if @medical_record.update(medicalrecord_params)
+      redirect_to @medical_record
     else
-    render 'edit'
+      render 'edit'
     end
   end
 
-  def destory
-    @medicalrecord = MedicalRecord.find(params[:id])
-    @medicalrecord.destroy
+  def destroy
+    @medical_record = Medicalrecord.find(params[:id])
+    @medical_record.destroy
  
-    redirect_to medicalrecords_path
+    redirect_to medical_records_path
   end
 
   private

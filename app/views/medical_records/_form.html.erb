@@ -1,12 +1,12 @@
-<%= form_with scope: :medicalrecord, url: medical_records_path, local: true do |form| %>
+<%= form_with model: @medical_record, local: true do |form| %>
   <p>
-    <%= form.label :date_of_admit %><br>
-    <%= form.text_field :date_of_admit %>
+    <%= form.label :Date_of_admit %><br>
+    <%= form.date_field :date_of_admit %>
   </p>
  
   <p>
     <%= form.label :date_of_discharge %><br>
-    <%= form.text_field :date_of_discharge %>
+    <%= form.date_field :date_of_discharge %>
   </p>
 
   <p>
@@ -16,7 +16,7 @@
  
  <p>
     <%= form.label :room_charge %><br>
-    <%= form.text_area :room_charge %>
+    <%= form.text_field :room_charge %>
   </p>
  
  <p>

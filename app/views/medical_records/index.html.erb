@@ -4,16 +4,16 @@
 <table class="table">
  <thead>
   <tr>
-    <th>date_of_admit</th>
-    <th>date_of_discharge </th>
-    <th>doctor_fees</th>
-    <th>room_charge</th>
-    <th>total_bill</th>
+    <th>Admid Date</th>
+    <th>Discharge Date </th>
+    <th>Doctor Fees</th>
+    <th>Room Charge</th>
+    <th>Total bill</th>
    
   </tr>
  </thead>
  <tbody>
-  <% @medicalrecords.each do |medical_record| %>
+  <% @medical_records.each do |medical_record| %>
 
     <tr>
       <td><%= medical_record.date_of_admit %></td>
@@ -23,9 +23,9 @@
       <td><%= medical_record.total_bill %></td>
       <td><%= link_to 'Show', medical_record_path(medical_record) %></td>
       <td><%= link_to 'Edit', edit_medical_record_path(medical_record) %></td>
-      <td><%= link_to 'Destroy', medical_record_path(medical_record),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Destroy', medical_record_path(medical_record),data: { 
+              turbo_method: :delete,
+              turbo_confirm: 'Are you sure?' } %></td>
     </tr>
   
   <% end %>
