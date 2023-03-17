@@ -1,0 +1,33 @@
+<%= form_with model: @doctor, local: true do |form| %>
+  <p>
+    <%= form.label :doctor_name %><br>
+    <%= form.text_field :doctor_name %>
+  </p>
+ 
+  <p>
+    <%= form.label :doctor_age %><br>
+    <%= form.text_field :doctor_age %>
+  </p>
+
+  <p>
+    <%= form.label :doctor_gender %><br>
+    <%= form.text_field :doctor_gender %>
+  </p>
+ 
+ <p>
+    <%= form.label :doctor_specialization %><br>
+    <%= form.text_field :doctor_specialization %>
+  </p>
+ 
+ <p>
+    <%= form.label :doctor_fees %><br>
+    <%= form.text_field :doctor_fees %>
+  </p>
+ 
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+

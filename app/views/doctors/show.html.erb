@@ -1,0 +1,27 @@
+<p>
+  <strong>doctor_name:</strong>
+  <%= @doctor.doctor_name %>
+</p>
+ 
+<p>
+  <strong>doctor_age:</strong>
+  <%= @doctor.doctor_age %>
+</p>
+ 
+<p>
+  <strong>doctor_gender:</strong>
+  <%= @doctor.doctor_gender %>
+</p>
+ 
+<p>
+  <strong>doctor_specialization:</strong>
+  <%= @doctor.doctor_specialization %>
+</p>
+ 
+<p>
+  <strong>doctor_fees:</strong>
+  <%= @doctor.doctor_fees %>
+</p>
+ 
+<%= link_to 'Edit', edit_doctor_path(@doctor) %>
+<%= link_to 'Back', doctors_path %>

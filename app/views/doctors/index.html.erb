@@ -1,0 +1,33 @@
+
+<h1>Listing doctors</h1>
+<%= link_to 'New doctor', new_doctor_path %>
+ 
+<table class="table">
+ <thead>
+  <tr>
+    <th>Name</th>
+    <th>Age </th>
+    <th>Gender</th>
+    <th>Specialization</th>
+    <th>Fees</th>
+  </tr>
+ </thead>
+ <tbody>
+  <% @doctors.each do |doctor| %>
+
+    <tr>
+      <td><%= doctor.doctor_name %></td>
+      <td><%= doctor.doctor_age %></td>
+      <td><%= doctor.doctor_gender %></td>
+      <td><%= doctor.doctor_specialization %></td>
+      <td><%= doctor.doctor_fees %></td>
+      <td><%= link_to 'Show', doctor_path(doctor) %></td>
+      <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+      <td><%= link_to 'Destroy', doctor_path(doctor),data: {
+              turbo_method: :delete,
+              turbo_confirm: 'Are you sure?' } %></td>
+    </tr>
+  
+  <% end %>
+</tbody>
+</table>
