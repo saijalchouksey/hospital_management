@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appointment_number: 1
+  appointment_date: 1
+
+two:
+  appointment_number: 1
+  appointment_date: 1
