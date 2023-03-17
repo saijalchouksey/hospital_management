@@ -1,2 +1,8 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+body{
+  padding-top: 50px;
+  background-image: url(image-url('backgroundimage.png'));
+  background-size: cover;
+}
